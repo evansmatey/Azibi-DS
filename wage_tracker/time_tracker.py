@@ -32,25 +32,8 @@ def time_tracker(starttime, endtime, filename, extension, wageperhour = 5):
     
 
 
+## add your function here
 
-def save_time_tracker_details( eyear, emon, eday, ehour, emin, syear, smon, sday, shour,
-                              smin , wageperhour, totalwage, totaltime, filename, extension):
-    
-    """
-    @save_time_tracker_details is a simple function that just saves the data generated form the time_tracker fuction 
-    into a csv or excel file,  
-    """
-    dataname = "".join([filename, extension])     #joining the filename and the extension
-    col = np.array(['eyear', 'emon', 'eday', 'ehour', 'emin', 'syear', 'smon', 'sday', 'shour',
-                              'smin' , 'wageperhour', 'totalwage', 'time_worked'])    #creating an array
-    tracker_data = pd.DataFrame(data=[[eyear, emon, eday, ehour, emin,syear, smon, sday, shour,
-                              smin , wageperhour, totalwage, totaltime]], columns=col)     #creating the dataframe 
-    
-    if extension == '.csv' or '.CSV':      #saving the dataframe as a csv or excel
-
-        tracker_data.to_csv(dataname)    
-    else:
-        tracker_data.to_excel(dataname)
 
 
 def main():
